@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Automation using selenium" thread-count="5" parallel="tests">
+<listeners>
+<listener class-name="com.qa.utility.Reporting"></listener>
+</listeners> 
+<test name="Myntra Product Selection" thread-count="5" parallel="tests">
+	<parameter name="Browser" value="chrome"/>
+	
+	<parameter name="Url" value="https://www.myntra.com/"/>
+<classes>
+	<class name="com.qa.testpages.TC_Myntra_Pages"/>
+	<class name="com.qa.testscript.TC_Myntra_SelectProduct_Category"/>
+</classes>
+</test>
+</suite> 
